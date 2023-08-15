@@ -19,13 +19,13 @@ namespace ChessBoard
 
         private void Form1_Paint_1(object sender, PaintEventArgs e)
         {
-            int width = Width / 8, heigth = Height / 8, coordinateX = 0, coordibateY = 0, k = 1;
+            int width = Width / 8, heigth = Height / 8, coordinateX = 0, coordibateY = 0, counter = 1;
             for (int i = 0; i < 9; i++)
             {
                 coordinateX = 0;
                 for (int j = 0; j < 9; j++)
                 {
-                    graph.FillRectangle((k % 2 == 0) ? black : white, coordinateX, coordibateY, width, heigth); k++;
+                    graph.FillRectangle((counter % 2 == 0) ? black : white, coordinateX, coordibateY, width, heigth); counter++;
                     coordinateX += width;
                 }
                 coordibateY += width;
